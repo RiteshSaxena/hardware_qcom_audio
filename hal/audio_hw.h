@@ -40,6 +40,7 @@
 
 #include <stdlib.h>
 #include <cutils/list.h>
+#include <hardware/audio_amplifier.h>
 #include <hardware/audio.h>
 #include <tinyalsa/asoundlib.h>
 #include <tinycompress/tinycompress.h>
@@ -502,6 +503,7 @@ struct audio_device {
     bool vr_audio_mode_enabled;
     bool bt_sco_on;
     struct audio_device_config_param *device_cfg_params;
+    amplifier_device_t *amp;
     unsigned int interactive_usecase_state;
 };
 
